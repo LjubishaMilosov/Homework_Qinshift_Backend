@@ -23,7 +23,7 @@ bool fourthSucces = int.TryParse(Console.ReadLine(), out int fourthNumber);
 
 if(firstSucces && secondSucces && thirdSucces && fourthSucces)
 {
-    double average = (firstNumber + secondNumber + thirdNumber + fourthNumber) / 4;
+    double average = ((double)firstNumber + (double)secondNumber + (double)thirdNumber + (double)fourthNumber) / 4;
     Console.WriteLine($"The average of {firstNumber}, {secondNumber}, {thirdNumber} and {fourthNumber} is: {average}");
 } else
 {
