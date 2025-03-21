@@ -1,6 +1,4 @@
-﻿
-
-using Domain.Enums;
+﻿using Domain.Enums;
 
 namespace Domain.Models
 {
@@ -20,23 +18,23 @@ namespace Domain.Models
 
     public class Employee
     {
-        public string Firstname { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public RoleEnum Role { get; set; }
         protected double Salary { get; set; }
         public Employee() { }
         public Employee(string firstname, string lastName, RoleEnum role, double salary)
         {
-            Firstname = firstname;
+            FirstName = firstname;
             LastName = lastName;
             Role = role;
             Salary = salary;
         }
         public void PrintInfo()
         {
-            Console.WriteLine($"First Name: {Firstname}, Last Name: {LastName}, Salary: {Salary}");
+            Console.WriteLine($"First Name: {FirstName}, Last Name: {LastName}, Salary: {Salary}");
         }
-        public double GetSalary()
+        public virtual double GetSalary()
         {
             return Salary;
         }
